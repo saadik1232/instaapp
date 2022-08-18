@@ -1,0 +1,473 @@
+.landing-main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  //background-image: url($assets-location + "images/onboard-bg.jpg");
+  background-image: url("https://lending-staging-live.s3.eu-west-1.amazonaws.com/onboard-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100%;
+  padding: 50px 40px 20px;
+  .landing-page-header {
+    overflow: hidden;
+    direction: ltr;
+    .language-list {
+      float: right;
+    }
+    .language-list-item {
+      display: inline-block;
+      vertical-align: top;
+      span {
+        background-color: #ef5e33;
+        color: #e4f2cf;
+        line-height: 27px;
+        display: block;
+        text-align: center;
+        min-width: 57px;
+        cursor: pointer;
+        svg {
+          margin: -4px 0 0;
+          path {
+            fill: #e4f2cf !important;
+          }
+        }
+      }
+      &.active {
+        span {
+          background-color: #e4f2cf;
+          color: #ef5e33;
+          svg {
+            path {
+              fill: #ef5e33 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .audio-text-wrapper {
+    padding: 30px 0 30px;
+    p {
+      font-family: $poppins-500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #404345;
+      .audio-icon {
+        display: inline-block;
+        cursor: pointer;
+        width: 36px;
+        height: 36px;
+        @include radius(50%);
+        background-color: #fff;
+        box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        line-height: 34px;
+        img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .botton-section {
+    background: transparent;
+    text-align: center;
+    padding: 24px 25px;
+    margin: 0 -40px;
+    border-top: transparent solid 4px;
+    p {
+      margin: 0 0 24px;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.35px;
+      color: #314546;
+      font-family: $poppins-400;
+      display: none;
+    }
+    .btn-primary {
+      min-width: 187px;
+      &.got-it-btn {
+        display: none;
+      }
+    }
+  }
+  &.focused {
+    .lanpage-overlay {
+      display: block;
+    }
+    .botton-section {
+      background: #e4f2cf;
+      border-top: #ef5e33 solid 4px;
+      position: relative;
+      z-index: 10;
+      p {
+        display: block;
+      }
+      .btn-primary {
+        min-width: 187px;
+        &.get-started-btn {
+          display: none;
+        }
+        &.got-it-btn {
+          display: inline-block;
+        }
+      }
+    }
+    .audio-text-wrapper {
+      p {
+        .audio-icon {
+          position: relative;
+          z-index: 10;
+        }
+      }
+    }
+  }
+  .lanpage-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+  }
+}
+.home-main {
+  padding: 54px 0 65px;
+  .home-wallet-banner {
+    background-color: #6abcaa;
+    padding: 30px 60px 30px 0;
+    .home-banner-wallet-ballance {
+      display: table;
+      width: 100%;
+    }
+    .home-banner-wallet-ballance-col {
+      display: table-cell;
+      vertical-align: middle;
+      width: 50%;
+    }
+    .profile-image {
+      display: block;
+      float: right;
+      img {
+        width: 74px;
+        height: 74px;
+        @include radius(50%);
+        border: 3px solid #ffffff;
+      }
+    }
+    .wallet-ballance-content {
+      padding: 0 0 0 15px;
+      span {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .title {
+        font-family: $poppins-600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #314546;
+      }
+      .wallet-ballance {
+        font-family: $poppins-600;
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.35px;
+        color: #ffffff;
+        em {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 16px;
+          font-style: normal;
+          line-height: 24px;
+        }
+      }
+      p {
+        font-family: $poppins-500;
+        font-size: 12px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+    }
+  }
+  h2,
+  h3,
+  h4 {
+    font-family: $poppins-600;
+    padding: 0 0;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.35px;
+    color: #314546;
+    overflow: hidden;
+    .see-credit,
+    .filters {
+      float: right;
+      font-family: $poppins-400;
+      font-size: 12px;
+      color: #828282;
+      letter-spacing: -0.41px;
+    }
+  }
+  .action-list-content-main {
+    margin: 0 -20px 22px;
+  }
+  .actions-list-main {
+    padding: 25px 20px 0;
+    .actions-list {
+      white-space: nowrap;
+      text-align: center;
+      overflow: auto;
+      padding: 10px 16px;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+    }
+    .actions-list-item {
+      display: inline-block;
+      margin: 0 5px;
+    }
+    .icon-holder {
+      display: inline-block;
+    }
+    .actions-content {
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      -ms-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      @include radius(5px);
+      width: 70px;
+      height: 70px;
+      padding: 10px 5px 0;
+      p {
+        font-family: $poppins-400;
+        font-size: 8.4192px;
+        line-height: 15px;
+        color: #314546;
+      }
+    }
+  }
+  .upcoming-payments {
+    margin: 0 -20px;
+    .upcoming-payments-list {
+      white-space: nowrap;
+      overflow: auto;
+      padding: 7px 16px 15px;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+      }
+    }
+    .upcoming-payments-list-item {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 4px;
+    }
+    .request-credit {
+      background-color: #fff;
+      box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -webkit-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -ms-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -o-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      @include radius(6px);
+      padding: 25px 6px 0;
+      width: 115px;
+      min-height: 115px;
+      text-align: center;
+      cursor: pointer;
+      .icon-holder {
+        display: inline-block;
+        margin: 0 0 6px;
+      }
+      p {
+        font-family: $poppins-600;
+        font-size: 12.2667px;
+        line-height: 17px;
+        letter-spacing: -0.314333px;
+        color: #314546;
+      }
+    }
+    .upcoming-payments-content {
+      background-color: #a4d7bd;
+      box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -webkit-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -moz-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -ms-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      -o-box-shadow: 3.83333px 3.6px 13.267px rgba(0, 0, 0, 0.12);
+      @include radius(6px);
+      padding: 6px;
+      width: 115px;
+      min-height: 115px;
+      span {
+        display: block;
+      }
+      .brand-title {
+        font-family: $poppins-600;
+        font-size: 12.2667px;
+        line-height: 17px;
+        letter-spacing: -0.314333px;
+        color: #ffffff;
+        margin: 0 0 10px;
+      }
+      .amount-title {
+        font-family: $poppins-600;
+        font-size: 9.00833px;
+        line-height: 17px;
+        letter-spacing: -0.314333px;
+        color: #314546;
+      }
+      .amount {
+        font-family: $poppins-700;
+        font-size: 23px;
+        line-height: 26px;
+        letter-spacing: 0.258863px;
+        color: #ffffff;
+        margin: 0 0 10px;
+      }
+      p {
+        font-family: $poppins-400;
+        font-size: 11.2604px;
+        line-height: 17px;
+        letter-spacing: -0.314333px;
+        color: #ffffff;
+        margin: 0 0 3px;
+      }
+      .amount-due-progress-main {
+        display: flex;
+        .progress-inner {
+          flex-grow: 1;
+          flex-basis: 0;
+          padding: 0 1px;
+          > div {
+            @include radius(0 !important);
+          }
+          &:first-child {
+            > div {
+              @include radius(6px 0 0 6px !important);
+            }
+          }
+          &:last-child {
+            > div {
+              @include radius(0 6px 6px 0 !important);
+            }
+          }
+        }
+      }
+    }
+  }
+  .credit-history {
+    padding: 10px 20px 0;
+    .transactions-list-row {
+      border: 1px solid #a4d7bd;
+      margin: 10px 0 0;
+      @include radius(6px);
+      display: table;
+      width: 100%;
+      position: relative;
+      padding: 8px;
+      .transactions-list-col {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 80px 0 10px;
+        &:first-child() {
+          width: 44px;
+          padding: 0;
+        }
+      }
+      .transactions-icon {
+        display: block;
+        background-color: #a4d7bd;
+        width: 44px;
+        height: 44px;
+        background-image: url($assets-location + "images/cart-icon.svg");
+        @include radius(6px);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      .title {
+        display: block;
+        font-family: $poppins-600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #404345;
+      }
+      p {
+        font-family: $poppins-400;
+        font-size: 10px;
+        line-height: 20px;
+        color: #404345;
+        b {
+          font-weight: normal;
+          color: #757575;
+        }
+      }
+    }
+    .credit-history-right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      font-size: 16px;
+      line-height: 16px;
+      color: #404345;
+      @include transform(translateY(-50%));
+      text-align: right;
+      .credit-amount {
+        font-family: $poppins-600;
+        line-height: 12px;
+        letter-spacing: -0.41px;
+        color: #373737;
+        display: block;
+      }
+      .date {
+        font-family: $poppins-400;
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: -0.41px;
+        color: #9f9f9f;
+        display: block;
+      }
+    }
+  }
+}
+
+.urdu {
+  .landing-main {
+    .audio-text-wrapper {
+      p {
+        font-family: $urduFont;
+        .audio-icon {
+          line-height: 43px;
+        }
+      }
+    }
+    .botton-section {
+      .btn-primary {
+        font-family: $urduFont;
+      }
+    }
+    &.focused {
+      .botton-section {
+        p {
+          font-family: $urduFont;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}

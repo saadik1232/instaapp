@@ -1,0 +1,38 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    direction: ltr;
+    &.credit-footer{
+        background-color: #314546;
+        .footer-list{
+            display: table;
+            width: 100%;
+            .footer-list-item{
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                width: 25%;
+                position: relative;
+                padding: 10px 0 7px;
+                &.active{
+                    &:after{
+                        content: "";
+                        clear: both;
+                        display: block;
+                        position: absolute;
+                        height: 4px;
+                        background-color: #6ABCAA;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+                    path{
+                        fill: #6ABCAA;
+                    }
+                }
+            }
+        }
+    }
+}

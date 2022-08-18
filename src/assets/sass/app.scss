@@ -1,0 +1,76 @@
+// Bootstrap
+// @import 'bootstrap/bootstrap';
+
+// FontAwesome
+// @import 'fontawesome/fontawesome',
+//         'fontawesome/solid',
+//         'fontawesome/regular',
+//         'fontawesome/brands';
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/functions", "abstracts/breakpoints",
+  "abstracts/mixins";
+
+// 2. Vendors
+@import "vendor/normalize", "vendor/animate";
+
+// 3. Base stuff
+@import "base/base", "base/fonts", "base/grid", "base/typography";
+
+// 4. Layout-related sections
+@import "layouts/body", "layouts/container", "layouts/section", "layouts/layout",
+  "layouts/page", "layouts/header", "layouts/form", "layouts/footer";
+
+// 5. Components
+@import "components/nav", "components/banner", "components/popup",
+  "components/side-bar";
+
+// 6. Page-specific styles
+@import "pages/home", "pages/profile", "pages/why-finja", "pages/credit",
+  "pages/tncs", "pages/islamic-compliance", "pages/inner-pages", "pages/setpin",
+  "pages/home-creiditloan", "pages/TnCurdu.scss";
+
+// Importing helpers right at the end.
+@import "base/helpers";
+
+//instaapp
+@import "./isntaapp/instaapp";
+
+.form-group234 {
+  height: 140px;
+}
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 100%;
+  transition: height 0.15s ease-in;
+  direction: ltr;
+  //border: 2px solid red;
+}
+
+.imgholder-modal {
+  //border: red 2px solid;
+  //height: 39vh;
+  max-width: 100%;
+  height: 26vh;
+}
+
+.imgclass-modal {
+  // border: red 2px solid;
+  //height: 39vh;
+  max-width: 100%;
+  height: auto;
+}
+
+.imgclose-modal {
+  position: absolute;
+  right: -7px;
+  top: -12px;
+  width: 34px;
+}
+.css-60wkzs {
+  &:focus-visible {
+    outline: none;
+  }
+}

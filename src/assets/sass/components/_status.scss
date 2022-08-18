@@ -1,0 +1,94 @@
+$uploaded : #bdb715;
+$checked : #46a748;
+$processing : #ff7108;
+$processed : #5595f0;
+$disapproved : #ec0b0b;
+$flagged : #ff7108;
+$error : #ff7108;
+$disbursement : #486afa;
+$rejected : #d23f42;
+$deleted: #d23f42;
+$archived: #8b8b8b;
+$paid: #a8aaff;
+.status{
+	display: inline-block;
+	border: #545557 solid 1px;
+	@include radius(4px);
+	padding: 0 13px;
+	font-size: 13px;
+	line-height: 35px;
+	min-width: 97px;
+	text-align: center;
+	font-family: $poppins-500;
+	cursor: pointer;
+	&.uploaded{
+		border-color: $uploaded;
+		color: $uploaded;
+	}
+	&.checked{
+		border-color: $checked;
+		color: $checked;
+	}
+	&.approved{
+		@extend .checked;
+	}
+	&.completed{
+		@extend .checked;
+	}
+	&.disbursed{
+		@extend .checked;
+	}
+	&.processing{
+		border-color: $processing;
+		color: $processing;
+	}
+	&.archived{
+		border-color: $archived;
+		color: $archived;
+	}
+	&.proccessed{
+		@extend .checked;
+	}
+	&.on-time{
+		@extend .checked;
+	}
+	&.review{
+		@extend .processing;
+	}
+	&.disapproved{
+		border-color: $disapproved;
+		color: $disapproved;
+	}
+	&.late{
+		@extend .disapproved;
+	}
+	&.flagged{
+		border-color: $flagged;
+		color: $flagged;
+	}
+	&.error{
+		border-color: $error;
+		color: $error;
+	}
+	&.disbursement{
+		border-color: $disbursement;
+		color: $disbursement;
+	}
+	&.rejected{
+		border-color: $rejected;
+		color: $rejected;
+	}
+}
+.status-txt {
+	color: #0ca800;
+
+	&.behind-schedule {
+		color: $base-color;
+	}
+
+	&.ahead-schedule {
+		color: #000;
+	}
+}
+
+//  Noman End

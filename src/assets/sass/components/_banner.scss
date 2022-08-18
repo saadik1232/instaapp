@@ -1,0 +1,70 @@
+.banner{
+	.item{
+		position: relative;
+	}
+	.banner-text{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.heading{
+		font-size: 70px;
+		line-height: 80px;
+		color: #fff;
+		text-transform: uppercase;
+		font-family: $poppins-700;
+		@include upto-small(){
+			font-size: 55px;
+			line-height: 65px;
+		}
+		@include small-mobile(){
+			font-size: 25px;
+			line-height: 25px;
+		}
+	}
+	.subheading{
+		font-size: 45px;
+		line-height: 45px;
+		color: #f09802;
+		font-family: $poppins-600;
+		@include upto-small(){
+			font-size: 25px;
+			line-height: 35px;
+		}
+		@include small-mobile(){
+			font-size: 15px;
+			line-height: 25px;
+		}
+	}
+	.btn-primary{
+		margin-top: 25px;
+		@include small-mobile(){
+			margin-top: 12px;
+		}
+	}
+	.owl-carousel {
+		.owl-dots{
+			display: none;
+		}
+		.owl-nav{
+			.owl-prev, .owl-next{
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: rgba(255, 255, 255, .5);
+				padding: 10px 12px !important;
+				font-family: $poppins-300;
+				font-size: 45px;
+			}
+			.owl-next{
+				right: 0;
+			}
+			.owl-prev{
+				left: 0;
+			}
+		}
+	}
+	
+	
+}

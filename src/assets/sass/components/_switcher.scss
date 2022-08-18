@@ -1,0 +1,56 @@
+.swither {
+  float: right;
+  margin: 9px 30px 0 0;
+  &:after{
+    content:'';
+    clear: both;
+    display: block;
+  }
+  input {
+    display: none;
+  }
+  .swither-inner{
+    margin: 0;
+  }
+  .swither-label{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 500;
+    color: #70777d;
+    cursor: pointer;
+  }
+  .label-for-input {
+    width: 48px;
+    height: 26px;
+    border: 2px solid #575758;
+    @include radius(30px);
+    position: relative;
+    cursor: pointer;
+    background-color: #393e43;
+    @include transition(0.3s ease);
+    margin: 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+    &:before {
+      @include transition(0.3s ease);
+      content: "";
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      background: #fff;
+      left: 4px;
+      top: 2.4px;
+      box-sizing: border-box;
+      color: black;
+      border-radius: 100px;
+    }
+  }
+  input[type="checkbox"]:checked + .label-for-input {
+    background: $base-color;
+    border-color: $base-color;
+  }
+  input[type="checkbox"]:checked + .label-for-input:before {
+    left: 23px;
+  }
+}

@@ -1,0 +1,50 @@
+.inner-banner{
+	background-color: #232c43;
+	min-height: 500px;
+	position: relative;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@include upto-small{
+		min-height: 250px;
+	}
+	&.electrical-inner-banner{
+		background-image: url($assets-location+'images/electrical-banner.jpg');
+	}
+	&.civil-inner-banner{
+		background-image: url($assets-location+'images/civil-works-banner.jpg');
+	}
+	&.bms-inner-banner{
+		background-image: url($assets-location+'images/bms-banner.jpg');
+	}
+	&.panel-building-inner-banner{
+		background-image: url($assets-location+'images/panel-building-banner.jpg');
+	}
+	&.contact-banner{
+		background-image: url($assets-location+'images/electrical-banner.jpg');
+	}
+	&.digital-signage-inner-banner{
+		background-image: url($assets-location+'images/digital-signage-banner.jpg');
+	}
+	h1{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		left: 0;
+		text-align: center;
+		text-transform: uppercase;
+		color: $base-color;
+		font-family: $poppins-600;
+		font-size: 50px;
+		line-height: 50px;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		@include upto-small{
+			font-size: 25px;
+			line-height: 50px;
+		}
+	}
+}

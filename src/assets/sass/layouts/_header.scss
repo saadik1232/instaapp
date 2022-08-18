@@ -1,0 +1,111 @@
+.left-arrow {
+  cursor: pointer;
+}
+.header{
+  direction: ltr;
+}
+// Profile header
+.top-bar {
+  position: relative;
+  padding: 13px 0 16px;
+  direction: ltr;
+  .back-arrow {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    width: 51px;
+    height: 25px;
+    line-height: 0;
+    cursor: pointer;
+    @include transform(translateY(-50%));
+  }
+  .progress-container {
+    text-align: center;
+    .progress-inner {
+      display: inline-block !important;
+      margin: 0 2px;
+      &:first-child {
+        > div {
+          @include radius(8px 0 0 8px !important);
+        }
+      }
+      &:last-child {
+        > div {
+          @include radius(0 8px 8px 0 !important);
+        }
+      }
+      > div {
+        @include radius(0 !important);
+      }
+    }
+    
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  &.transparent-header {
+    background-color: #314546;
+    &.credit-header {
+      .header-label {
+        color: #fff;
+      }
+    }
+  }
+  &.home-header {
+  }
+  &.credit-header {
+    padding: 11px 15px;
+    .header-logo {
+      text-align: center;
+    }
+    .user-profile {
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      vertical-align: middle;
+      @include radius(50%);
+      cursor: pointer;
+      overflow: hidden;
+      background-color: #a4d7bd;
+      background-image: url($assets-location + "/images/profile_dummy.png");
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: 100%;
+    }
+    .header-profile-main {
+      text-align: right;
+    }
+    .header-label {
+      display: block;
+      text-align: center;
+      font-family: $poppins-700;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.35px;
+      color: #314546;
+      padding: 0 22px 0 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.urdu{
+  .header{
+    &.credit-header{
+      direction: ltr;
+      .header-label{
+        font-family: $urduFont;
+        letter-spacing: 0;
+        line-height: 38px;
+      }
+    }
+  }
+}

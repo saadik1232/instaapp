@@ -1,0 +1,136 @@
+.carousel_primary {
+	background: $color-grey;
+	padding: 20px 0 0 0;
+
+	max-height: 370px;
+	overflow: hidden;
+
+	.container {
+
+
+	}
+
+	.carousel-chevron {
+		height: 32px;
+		width: auto;
+	}
+
+	.carousel_primary_items {
+
+		display: block;
+		list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+
+		.carousel_primary_item {
+
+			display: inline-block;
+			border: 2px solid $color-grey-darker;
+			border-radius: 10px;
+			overflow: hidden;
+
+			
+			a,
+			a:hover {
+				text-decoration: none;
+			}
+
+			.image {
+				height: 230px;
+			}
+
+			.description {
+				padding: 20px 20px 15px 20px;
+				position: relative;
+				height: 70px;
+				text-align: left;
+
+				.title {
+					display: block;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 1.29;
+
+				}
+
+				.sub-title {
+					display: block;
+					font-size: 12px;
+					line-height: 1.33;
+
+				}
+
+				.btn {
+					position: absolute;
+					right: 20px;
+					top: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+.owl-carousel {
+	position: relative;
+	text-align: center;
+	padding: 30px 0 0;
+	.owl-nav {
+
+		button {
+			position: absolute;
+			top: 40%;
+
+			&.owl-prev {
+
+				left: -20px;
+
+			}
+
+			&.owl-next {
+				right: -20px;
+			}
+		}
+	}
+	.owl-dots {
+		display: block;
+	    margin: -4px auto 7px;
+	    position: absolute;
+	    text-align: center;
+	    top: 0;
+	    width: 100%;
+
+		.owl-dot {
+
+			display: inline-block;
+			margin-right: 5px;
+			vertical-align: middle;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			span {
+				display: block;
+				height: 14px;
+				width: 14px;
+				border-radius: 14px;
+				background: #0ea5f0;
+
+			}
+
+			&.active {
+
+				span {
+
+					background: transparent;
+					border: #0fa2f0 solid 2px;
+					width:16px;
+					height: 16px;
+				}
+			}
+
+		}
+
+	}
+}

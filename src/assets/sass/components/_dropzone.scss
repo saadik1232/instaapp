@@ -1,0 +1,76 @@
+.dropzone {
+  z-index: 1;
+  position: relative;
+  box-sizing: border-box;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: 2px dashed $border-color;
+  text-align: center;
+  overflow: hidden;
+  padding: 60px 20px;
+  &.dz-drag-hover{
+    border: 2px dashed $base-color;
+  }
+  .uploadedFileName{
+    display: none;
+  }
+  .dz-preview{
+    display: none;
+  }
+  &.dg-files-reached{
+    border: #46a748 2px dashed;
+  }
+}
+.drozone-label{
+  display: block;
+  margin: 0;
+  cursor: pointer;
+}
+.dropzone.is-dragover {
+  border-color: #666;
+  background: #eee;
+}
+.dropzone .content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.dropzone input[type="file"]{
+  opacity: 0;
+}
+.dropzone .filename {
+  display: block;
+  font-weight: 500;
+  color: #000;
+  display: block;
+  font-size: 23px;
+  line-height: 23px;
+  margin: 10px 0 0;
+}
+.dropzone .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.batch-upload-inner{
+  .dropzone-or{
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: #a6a6a6;
+    margin: 16px 0;
+  }
+  .select-file-btn{
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+  }
+}

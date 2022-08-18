@@ -1,0 +1,22 @@
+.tncs-main {
+  .btn-holder {
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    .btn {
+      margin: 0 5px;
+    }
+  }
+}
+.tncs-iframe {
+  width: 100% !important;
+  position: fixed;
+  height: calc(100% - 80px);
+  border: none;
+  margin: 0;
+  padding: 0;
+}

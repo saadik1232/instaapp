@@ -1,0 +1,21 @@
+.breadcrumbs {
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 30px;
+
+	li {
+		list-style-type: none;
+		display: inline-block;
+	}
+
+	
+}
+
+@include mobile() {
+
+	.breadcrumbs {
+		padding-bottom: 10px;
+		padding-left: 15px;
+	}
+}

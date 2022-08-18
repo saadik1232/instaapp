@@ -1,0 +1,27 @@
+.page-overlay{
+	background-color: rgba(0, 0, 0, .9);
+	position: fixed;
+	z-index: 101;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all 0.5s ease-in-out);
+	&.active{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.audio-narration{
+	padding: 0 0 18px;
+	p{
+		display: inline;
+		margin-right: 10px !important;
+	}
+	img{
+		display: inline;
+	}
+}

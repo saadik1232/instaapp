@@ -1,0 +1,53 @@
+.profilebodyinsta {
+  padding: 36px 40px 37px;
+  text-align: center;
+  display: inline-flex;
+}
+
+.instaimgholder-main {
+  text-align: center;
+  margin-left: -36px;
+}
+
+.instaimgholder {
+  border-radius: 50%;
+  width: 133px;
+}
+
+.btnprimaryinsta {
+  background-color: #ef5e33 !important;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0 15px;
+  text-align: center;
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: normal;
+  box-shadow: none !important;
+  color: #fff;
+  background: black;
+  color: white;
+  width: 97px;
+}
+
+.navclassinsta {
+  padding: 10px;
+}
+
+.myclass {
+  flex: 0 0 auto;
+  width: 47%;
+  /* margin: 0px; */
+  height: 260px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.imgholdergrid {
+  height: -webkit-fill-available;
+  width: auto;
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+}

@@ -1,0 +1,58 @@
+.nav-tabs{
+	&-1{
+		background: #dfdfdf;
+		@include radius(4px);
+		border: none;
+		padding:5px; 
+		.nav-item{
+			margin:0;
+			font-size: 14px;
+			font-family: $poppins-500;
+		}
+		.nav-link{
+			padding: 5px 15px;
+			border:none;
+			color: #000;
+			@include radius(4px);
+			&.active{
+				color: $base-color;
+			}
+			&:hover{
+				border:none;
+			}
+		}
+	}
+	&-2{
+		margin: 0 auto;
+	    border-bottom: #dedcdc solid 2px;
+	    .nav-item {
+		    font-family: $poppins-500;
+		    font-size: 14px;
+		    line-height: 20px;
+		    margin: 0 20px;
+		    &:first-child{
+		    	margin-left: 0;
+		    }
+		    .nav-link{
+				color: #7f7d7d;
+	    		padding: 10px 5px;
+	    		position: relative;
+	    		background: transparent;
+	    		@include radius(0);
+	    		border: none;
+	    		&.active{
+			    	&:after{
+			    		content: "";
+					    clear: both;
+					    left: 0;
+					    background: $base-color;
+					    bottom: -2px;
+					    height: 2px;
+					    width: 100%;
+					    position: absolute;
+			    	}
+			    }
+			}
+		}
+	}
+}

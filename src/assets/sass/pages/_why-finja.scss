@@ -1,0 +1,62 @@
+.profile-container {
+  &.why-finja-main {
+    .profile-body {
+      padding: 36px 40px 80px;
+      p {
+        font-family: $poppins-500;
+        font-size: 18px;
+        line-height: 26px;
+        //margin: 0 0 50px;
+      }
+      .btn-holder {
+        margin: 50px 0 0;
+        .btn-primary {
+          max-width: 167px;
+          display: block;
+          margin: 0 auto;
+        }
+        .skip {
+          display: inline-block;
+          color: #6abcaa;
+          font-family: $poppins-500;
+          font-size: 14px;
+          line-height: 16px;
+          margin: 22px 0 0;
+        }
+      }
+    }
+  }
+  &.sec-flow {
+    h2 {
+      font-family: $poppins-500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #404345;
+      margin: 0 0 7px;
+    }
+    .profile-body {
+      padding: 36px 40px 150px;
+      p {
+        font-size: 14px;
+        line-height: 21px;
+        color: #404345;
+      }
+      .btn-holder {
+        text-align: center;
+      }
+    }
+  }
+}
+.urdu {
+  .profile-container {
+    &.why-finja-main {
+      .profile-body {
+        .btn-holder {
+          .skip {
+            font-family: $urduFont;
+          }
+        }
+      }
+    }
+  }
+}

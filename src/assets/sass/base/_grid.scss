@@ -1,0 +1,6 @@
+.container{
+	@include upto-tablet(){
+		max-width: 100% !important;
+	}
+	
+}

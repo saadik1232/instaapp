@@ -1,0 +1,107 @@
+.progress-bar-holder{
+	display: inline-block;
+	width: 42%;
+	position: relative;
+	.progress{
+		background: #eeeeee;
+		height: 8px;
+		@include radius(8px);
+		overflow: hidden;
+		border: #e1e1e1 solid 1px;
+		position: relative;
+		-webkit-box-shadow: 0 1px #fff;
+		-moz-box-shadow: 0 1px #fff;
+		box-shadow: 0 1px #fff;
+		border: solid 1px #d8d8d8;
+		.progress-bar{
+			&:before{
+				content:"";
+				clear: both;
+				display: block;
+				position: absolute;
+				left: 0;
+				height: 100%;
+				top: 0;
+				width: 0%;
+				background-color: #6BB438;
+			}
+		}
+		&.step-one{
+			.progress-bar{
+				width: 30%;
+				&:before{
+					width: 0;
+				}
+			}
+		}
+		&.step-two{
+			.progress-bar{
+				width: 70%;
+				&:before{
+					width: 30%;
+				}
+			}
+		}
+		&.step-three{
+			.progress-bar{
+				width: 100%;
+				&:before{
+					width: 70%;
+				}
+			}
+		}
+	}
+	.progress-bar-striped{
+		background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #56aa1c), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #56aa1c), color-stop(0.75, #56aa1c), color-stop(0.75, transparent), to(transparent));
+		background-image: -webkit-linear-gradient(-45deg, #56aa1c 25%, transparent 25%, transparent 50%, #56aa1c 50%, #56aa1c 75%, transparent 75%, transparent);
+		background-image: -o-linear-gradient(-45deg, #56aa1c 25%, transparent 25%, transparent 50%, #56aa1c 50%, #56aa1c 75%, transparent 75%, transparent);
+		background-color: #6BB438;
+	}
+	.prgress-number{
+		display: block;
+		&:after{
+			content:"";
+			clear: both;
+			display: block;
+		}
+	}
+	.progress-number-list{
+		float: left;
+		width: 50%;
+		text-align: center;
+		font-family: $poppins-500;
+		font-weight: normal;
+		color: #818283;
+		font-size: 10px;
+		line-height: 15px;
+		margin: -24px 0 0;
+		position: relative;
+		z-index: 50;
+		&:first-child{
+			padding: 0 0 0 52px;
+		}
+		&:last-child{
+			padding: 0 52px 0 0;
+		}
+		&.active{
+			color: #000;
+			.bullet{
+				background-color: $base-color;
+			}
+		}
+		.bullet{
+			display: block;
+			margin: 0 auto 8px;
+			height: 37px;
+			width: 37px;
+			background: #b6b6b6;
+			border: #eff0f3 solid 3px;
+			@include radius(37px);
+			text-align: center;
+			line-height: 32px;
+			font-weight: bold;
+			font-size: 13px;
+			color: #fff;
+		}
+	}
+}

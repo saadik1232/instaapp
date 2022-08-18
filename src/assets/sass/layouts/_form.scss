@@ -1,0 +1,269 @@
+.absolute-label {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  line-height: 18px;
+  display: inline-block;
+  padding: 0 8px;
+  background-color: #fff;
+  color: #6f6f6f;
+  &.top-fixed {
+    color: $base-color;
+    -webkit-transform: translate3d(0, -21px, 0);
+    -moz-transform: translate3d(0, -21px, 0);
+    -ms-transform: translate3d(0, -21px, 0);
+    -o-transform: translate3d(0, -21px, 0);
+    transform: translate3d(0, -21px, 0);
+  }
+}
+.form-group {
+  position: relative;
+}
+.form-group input:valid + .absolute-label,
+.form-group input:focus + .absolute-label,
+.form-group textarea:valid + .absolute-label,
+.form-group textarea:focus + .absolute-label,
+.form-group input:disabled + .absolute-label,
+.form-group input[readonly] + .absolute-label {
+  color: $base-color;
+  -webkit-transform: translate3d(0, -23px, 0);
+  -moz-transform: translate3d(0, -23px, 0);
+  -ms-transform: translate3d(0, -23px, 0);
+  -o-transform: translate3d(0, -23px, 0);
+  transform: translate3d(0, -23px, 0);
+}
+.btn-primary {
+  background-color: #ef5e33 !important;
+  box-shadow: none;
+  border: none;
+  @include radius(6px);
+  padding: 0 15px;
+  text-align: center;
+  font-family: $poppins-600;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: normal;
+  box-shadow: none !important;
+  color: #fff;
+  &:hover {
+    background-color: #ef5e33 !important;
+    border-color: #ef5e33 !important;
+  }
+  &.btn-arrow {
+    background-image: url($assets-location + "images/btn-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+  }
+  &.disabled,
+  &:disabled {
+    background-color: #ef5e33 !important;
+    border-color: #ef5e33 !important;
+    opacity: 0.5;
+  }
+  &.state-btn {
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    color: white;
+    padding: 0;
+    background-color: transparent !important;
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+.generic-form-main {
+  background-color: #396161;
+  padding: 16px 25px 23px;
+  .form-group {
+    margin: 0 0 18px;
+    position: relative;
+  }
+  .location-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url($assets-location + "images/location-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  label {
+    margin: 0 0 8px;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6abcaa;
+    letter-spacing: 0.05em;
+    font-family: $poppins-600;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+  .form-control {
+    background: #314546;
+    @include radius(6px);
+    height: 46px;
+    border: none;
+    font-size: 14px;
+    font-family: $poppins-400;
+    color: #fff;
+    box-shadow: none !important;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: "";
+    width: 100%;
+    padding: 0 15px;
+    outline: 0 !important;
+    &.location-field {
+      padding-right: 48px;
+    }
+    &.custom-select {
+      background-image: url($assets-location + "images/select-icon.svg");
+      background-repeat: no-repeat;
+      background-position: 96% 50%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: "";
+    }
+  }
+  .form-control2 {
+    background: #314546;
+    border-radius: 6px;
+    height: 46px;
+    border: none;
+    font-size: 24px;
+    font-family: "Poppins-Regular", sans-serif;
+    color: #fff;
+    &.location-field {
+      padding-right: 48px;
+    }
+    border: 1px solid red;
+    box-shadow: 0 0 10px;
+  }
+  textarea.form-control {
+    height: 147px !important;
+    font-size: 16px;
+    padding: 15px 18px;
+  }
+  textarea.form-control2 {
+    height: 147px !important;
+    font-size: 16px;
+    padding: 15px 18px;
+    border: 1px red;
+  }
+  .btn-holder {
+    margin: 87px 0 0;
+    text-align: center;
+    .btn-primary {
+      max-width: 167px;
+      width: 100%;
+    }
+  }
+  .react-datepicker {
+    display: block;
+    border: none;
+  }
+  .react-datepicker {
+    background-color: #314546;
+  }
+  .react-datepicker__header {
+    background-color: transparent;
+    border: none;
+  }
+  .react-datepicker__header__dropdown {
+    display: none;
+  }
+  .react-datepicker__month-container {
+    float: none;
+    width: 100%;
+    padding: 10px 0 0;
+  }
+  .react-datepicker__week {
+    display: table;
+    width: 100%;
+    .react-datepicker__day {
+      display: table-cell;
+    }
+  }
+  .react-datepicker__day-names {
+    display: table;
+    width: 100%;
+    .react-datepicker__day-name {
+      display: table-cell;
+    }
+  }
+  // .react-datepicker__navigation{
+  //     position: static;
+  //     display: inline-block;
+  // }
+  .react-datepicker__day-name {
+    font-family: $poppins-700;
+    font-size: 10px;
+    line-height: 14px;
+    color: #fff;
+  }
+  .react-datepicker__header {
+    padding: 0 30px;
+    button {
+      background-color: transparent;
+      border: none;
+    }
+    select {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  .react-datepicker__month {
+    margin: 0;
+    padding: 20px 30px;
+  }
+  .react-datepicker__day {
+    font-family: $poppins-600;
+    font-size: 10px;
+    line-height: 26px;
+    color: #fff;
+    &.react-datepicker__day--selected {
+      @include radius(8px);
+      border: 3px solid #ef5e33;
+      background-color: transparent;
+    }
+    &.react-datepicker__day--keyboard-selected {
+      @include radius(8px);
+      background-color: #ef5e33 !important;
+    }
+    &.react-datepicker__day--outside-month {
+      opacity: 0.5;
+    }
+  }
+}
+.form-control {
+  box-shadow: none !important;
+  border: none;
+  width: 100%;
+  &:focus {
+    box-shadow: none !important;
+    border: none;
+  }
+}
+
+.urdu {
+  .btn-primary {
+    font-family: $urduFont;
+    font-size: 17px;
+  }
+}

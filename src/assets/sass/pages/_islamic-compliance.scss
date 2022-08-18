@@ -1,0 +1,51 @@
+.islamic-compliance {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #314546;
+  overflow: auto;
+  padding: 0 0 80px;
+  .islamic-compliance-content {
+    padding: 40px 30px 20px;
+  }
+  p {
+    font-family: $poppins-400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.35px;
+    color: #ffffff;
+    margin: 0 0 20px;
+    svg {
+      margin: 0 6px;
+    }
+  }
+  .vid-sec {
+    border-bottom: 4px solid #ef5e33;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .btn-holder {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px 10px;
+    width: 100%;
+    background-color: #314546;
+    .btn-primary {
+      width: 167px;
+    }
+  }
+}
+.urdu{
+    .islamic-compliance{
+        p{
+            font-family: $urduFont;
+            letter-spacing: 0;
+        }
+    }
+}

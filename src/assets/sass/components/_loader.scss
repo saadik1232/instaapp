@@ -1,0 +1,145 @@
+.loader-main-holder {
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  bottom: 0;
+	  background-color:rgba(0, 0, 0, .9);
+	  z-index: 12000;
+	}
+
+.loader {
+  height: 20px;
+  width: 250px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff;
+}
+.loader--dot {
+  animation-name: loader;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+}
+.loader--dot:first-child {
+  background-color: #fff;
+  animation-delay: 0.5s;
+}
+.loader--dot:nth-child(2) {
+  background-color: #fff;
+  animation-delay: 0.4s;
+}
+.loader--dot:nth-child(3) {
+  background-color: #fff;
+  animation-delay: 0.3s;
+}
+.loader--dot:nth-child(4) {
+  background-color: #fff;
+  animation-delay: 0.2s;
+}
+.loader--dot:nth-child(5) {
+  background-color: #fff;
+  animation-delay: 0.1s;
+}
+.loader--dot:nth-child(6) {
+  background-color: #fff;
+  animation-delay: 0s;
+}
+.loader--text {
+  position: absolute;
+  top: 200%;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  margin: auto;
+}
+.loader--text:after {
+  content: "Processing";
+  font-weight: 400;
+  animation-name: loading-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+  15% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(230px);
+  }
+  65% {
+    transform: translateX(230px);
+  }
+  95% {
+    transform: translateX(0);
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: "Processing";
+  }
+  25% {
+    content: "Processing.";
+  }
+  50% {
+    content: "Processing..";
+  }
+  75% {
+    content: "Processing...";
+  }
+}
+
+.inside-loader{
+  padding: 200px 25px;
+  text-align: center;
+  .inside-loader-inner{
+    img{
+      max-width: 130px;
+      display: block;
+      margin: 0 auto;
+    }
+    i{
+      margin: 20px 0 0;
+      font-size: 30px;
+      color: #eb401f;
+    }
+  }
+}
+.full-screen-loader{
+  padding: 25px;
+  text-align: center;
+  position: fixed;
+  display: table;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color:rgba(0, 0, 0, .9);
+  .inside-loader-inner{
+    display: table-cell;
+    vertical-align: middle;
+    img{
+      max-width: 130px;
+      display: block;
+      margin: 0 auto;
+    }
+    i{
+      margin: 20px 0 0;
+      font-size: 30px;
+      color: #eb401f;
+    }
+  }
+}

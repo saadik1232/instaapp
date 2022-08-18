@@ -1,0 +1,1004 @@
+.credit-card-list {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0 13px 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  &::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+  }
+  .credit-card-list-item {
+    display: inline-block;
+    padding: 0 7px;
+    width: calc(100% - 20px);
+  }
+}
+.credit-card {
+  background-color: #a4d7bd;
+  box-shadow: 0px 5.62992px 11.2598px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 5.62992px 11.2598px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 5.62992px 11.2598px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0px 5.62992px 11.2598px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 5.62992px 11.2598px rgba(0, 0, 0, 0.1);
+  @include radius(6px);
+  overflow: hidden;
+  padding: 20px 25px 15px 25px;
+  .credit-ballance-section {
+    float: left;
+  }
+  .brand-logo {
+    float: right;
+    margin: 15px 0 0;
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+  .card-top-sec {
+    overflow: hidden;
+  }
+  .title {
+    font-family: $poppins-500;
+    display: block;
+    font-size: 13.5118px;
+    line-height: 25px;
+    color: #314546;
+  }
+  .credit-ballance {
+    font-family: $poppins-600;
+    display: block;
+    font-size: 33.7795px;
+    line-height: 40px;
+    color: #fff;
+    position: relative;
+    span {
+      font-size: 13.5118px;
+      line-height: 28px;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  .amount-due-in {
+    p {
+      font-family: $poppins-400;
+      font-size: 13.5118px;
+      line-height: 25px;
+      color: #ffffff;
+      overflow: hidden;
+      margin: 0 0 6px;
+      svg {
+        float: right;
+        margin: 0 5px;
+      }
+    }
+  }
+  .amount-due-progress-main {
+    display: flex;
+    .progress-inner {
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 0 2px;
+      > div {
+        @include radius(0 !important);
+      }
+      &:first-child {
+        > div {
+          @include radius(6px 0 0 6px !important);
+        }
+      }
+      &:last-child {
+        > div {
+          @include radius(0 6px 6px 0 !important);
+        }
+      }
+    }
+  }
+}
+.credit-main-container {
+  padding: 54px 0 0;
+  .available-credit {
+    background-color: #314546;
+    padding: 21px 24px 21px 30px;
+  }
+  .no-credit-main {
+    padding: 0 20px;
+    margin: 0 0 25px;
+    p {
+      font-family: $poppins-400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #6b6b6b;
+      margin: 0 0 13px;
+    }
+    .image-holder {
+      @include radius(6px);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      -ms-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      -o-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        display: block;
+      }
+      .request-credit {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-family: $poppins-600;
+        background-color: #a4d7bd;
+        @include radius(0px 6px);
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -0.314333px;
+        background-image: url($assets-location + "images/credit-plus.svg");
+        background-repeat: no-repeat;
+        background-position: 22px 50%;
+        padding: 12px 13px 9px 64px;
+        width: 143px;
+      }
+    }
+  }
+  .available-credit-inner {
+    display: table;
+    width: 100%;
+    .label {
+      display: block;
+      font-family: $poppins-500;
+      font-size: 15px;
+      line-height: 28px;
+      letter-spacing: 0.35px;
+      color: #6abcaa;
+      white-space: nowrap;
+    }
+    .amount {
+      font-family: $poppins-600;
+      display: block;
+      font-size: 30px;
+      line-height: 28px;
+      letter-spacing: 0.35px;
+      color: #ffffff;
+      white-space: nowrap;
+      @include small-mobile() {
+        font-size: 20px;
+      }
+      span {
+        display: inline-block;
+        vertical-align: top;
+        &.rs {
+          font-size: 14px;
+          line-height: 14px;
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+    .request-credit {
+      text-align: right;
+    }
+  }
+  .available-credit-col {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .btn-primary {
+    &.request-credit {
+      line-height: 38px;
+      padding: 0 12px;
+      font-family: $poppins-600;
+      font-size: 12px;
+      @include radius(4px);
+      color: #fff;
+      @include small-mobile() {
+        font-size: 10px;
+      }
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        line-height: 0;
+        margin: -1px 3px 0 0;
+      }
+    }
+  }
+  &.distribution-list-main {
+    .distribution-head {
+      text-align: center;
+      margin: 38px 0 20px;
+      h2 {
+        font-family: $poppins-600;
+        font-size: 21px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        display: inline-block;
+        color: #314546;
+      }
+      .audio {
+        cursor: pointer;
+      }
+    }
+  }
+  .distribution-list {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 40px;
+    margin: 0 -15px;
+    .distribution-list-item {
+      border: 1px solid #314546;
+      flex-grow: 0;
+      max-width: calc(50% - 15px);
+      flex-basis: calc(50% - 15px);
+      padding: 16px;
+      margin: 0 7px 20px;
+    }
+  }
+  .distributor-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+  &.credit-calculator-main {
+    position: fixed;
+    background-color: #314546;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .credit-calculator-top-section {
+      padding: 6px 25px 0;
+      h2 {
+        font-family: $poppins-600;
+        font-size: 21px;
+        line-height: 32px;
+        letter-spacing: 0.35px;
+        color: #e4f2cf;
+      }
+      p {
+        font-family: $poppins-400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.35px;
+        color: #ffffff;
+      }
+      .form-group {
+        margin: 0 0 37px;
+      }
+      .form-control {
+        font-family: $poppins-400;
+        background-color: #e4f2cf;
+        @include radius(6px);
+        font-size: 19px;
+        color: #314546;
+        text-align: center;
+        padding: 0;
+        height: 45px;
+        width: 100%;
+        box-shadow: none;
+        outline: 0;
+      }
+    }
+    .head-text {
+      margin: 0 0 30px;
+    }
+    .credit-calculator-form {
+      padding: 40px 0 0;
+      label {
+        font-family: $poppins-600;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        color: #e4f2cf;
+        display: block;
+        margin: 0 0 13px;
+      }
+    }
+    .nav-tabs {
+      border: none;
+      display: table;
+      width: 100%;
+      margin: 0 0 48px;
+      .nav-link {
+        @include radius(0);
+        display: table-cell;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        border: none;
+        font-family: $poppins-600;
+        font-size: 14px;
+        line-height: 40px;
+        letter-spacing: -0.41px;
+        background-color: #e4f2cf;
+        color: #000;
+        isolation: initial !important;
+        padding: 0;
+        width: $width / 3;
+        &.active {
+          background-color: #6abcaa;
+          color: #fff;
+        }
+        &.changed-active {
+          background-color: #e4f2cf;
+          color: #000;
+        }
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -3px;
+          top: -1px;
+          bottom: -1px;
+          width: 3px;
+          background-color: #314546;
+          z-index: 9;
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -3px;
+          top: -1px;
+          bottom: -1px;
+          width: 3px;
+          background-color: #314546;
+          z-index: 9;
+        }
+        &:hover {
+          text-decoration: none;
+          border: none !important;
+          isolation: initial !important;
+        }
+        &:first-child() {
+          @include radius(6px 0px 0px 6px);
+          &:after,
+          &:before {
+            display: none;
+          }
+        }
+        &:last-child() {
+          @include radius(0 6px 6px 0);
+          &:after,
+          &:before {
+            // display: none;
+          }
+        }
+      }
+    }
+    .s-tab-content {
+      margin: 0 -25px;
+      padding: 35px 25px 12px;
+      background-color: #396161;
+    }
+    .tab-content {
+      margin: 0 -25px;
+      padding: 35px 25px 12px;
+      //background-color: #396161;
+      display: none;
+    }
+    .form-output {
+      .calculated-row {
+        position: relative;
+        margin: 0 0 15px;
+      }
+      .form-label {
+        display: block;
+        margin: 0;
+        font-family: $poppins-600;
+        font-size: 14px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: #6abcaa;
+        img {
+          margin: 0 0 0 15px;
+          vertical-align: middle;
+        }
+      }
+      p {
+        font-family: $poppins-400;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+      }
+      .form-amount {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-family: $poppins-400;
+        font-size: 26px;
+        line-height: 25px;
+        color: #ffffff;
+      }
+    }
+
+    .uplaoads-row {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid #4b7b7b;
+      padding: 9px 0;
+      &:first-child {
+        border: none;
+      }
+      .image-holder {
+        float: left;
+        img {
+          max-width: 28px;
+          max-height: 31px;
+        }
+      }
+      .text-box {
+        overflow: hidden;
+        cursor: pointer;
+        padding: 0 18px 0 7px;
+        span {
+          white-space: nowrap;
+          display: block;
+          &.uploads-title {
+            font-family: $poppins-400;
+            font-size: 10px;
+            line-height: 20px;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+          }
+          &.uploads-size {
+            font-family: $poppins-400;
+            font-size: 9px;
+            line-height: 10px;
+            letter-spacing: 0.05em;
+            color: #6abcaa;
+          }
+          &.cross {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            @include transform(translateY(-50%));
+            width: 35px;
+            height: 35px;
+            z-index: 8;
+            cursor: pointer;
+            display: block;
+            background-image: url($assets-location + "images/cross-filled.svg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+          }
+        }
+      }
+    }
+    .upload-new-image {
+      text-align: center;
+      padding: 13px 0 30px;
+      span {
+        font-family: $poppins-500;
+        display: inline-block;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        text-decoration-line: underline;
+        //color: #6abcaa;
+        color: white;
+        //background-color: black;
+        //color: white;
+      }
+    }
+    .btn-holder {
+      text-align: center;
+      margin: 3px 0 0;
+      .btn-primary {
+        min-width: 167px;
+      }
+    }
+  }
+  &.stock-detail-main {
+    position: fixed;
+    background-color: #314546;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    .stock-detail-top-text {
+      padding: 38px 25px 21px;
+      p {
+        font-family: $poppins-600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        color: #e4f2cf;
+      }
+    }
+    .confirmation-box {
+      background-color: #334d4e;
+      @include radius(9px);
+      padding: 13px 13px 16px;
+      margin: 41px 0 0;
+      label {
+        font-family: $poppins-600;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+        color: #6abcaa;
+        margin: 0 0 3px;
+      }
+      p {
+        font-family: $poppins-500;
+        font-size: 11.4px;
+        line-height: 16.6px;
+        color: #e5e5e5;
+        margin: 0 0 9px;
+      }
+      .MuiFormControlLabel-root {
+        margin: 0 -3px 0;
+        .PrivateSwitchBase-root-3 {
+          padding: 0;
+        }
+        .MuiTypography-body1 {
+          font-family: $poppins-500;
+          font-size: 11px;
+          line-height: 13px;
+          color: #fadbbd;
+        }
+        .MuiIconButton-label {
+          margin: 0 6px 0 0;
+        }
+      }
+      .MuiSvgIcon-root {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .btn-holder {
+      margin: 32px 0 0;
+    }
+    .generic-form-main {
+      padding: 20px 25px 30px;
+    }
+  }
+  &.credit-request-summary-main {
+    .credit-request-summary-content {
+      padding: 22px 25px 0;
+    }
+    h2 {
+      font-family: $poppins-600;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.35px;
+      color: #6abcaa;
+      overflow: hidden;
+      margin: 0 0 3px;
+      .see-term {
+        float: right;
+        font-family: $poppins-400;
+        cursor: pointer;
+        color: #828282;
+      }
+    }
+    .credit-request-summary-cal {
+      padding: 34px 0 40px;
+      p {
+        font-family: $poppins-500;
+        overflow: hidden;
+        font-size: 12px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        color: #314546;
+        margin: 10px 0;
+        .lebel {
+          font-family: $poppins-500;
+          float: left;
+          background-image: url($assets-location + "images/flag-icon.png");
+          background-position: 100% 50%;
+          background-repeat: no-repeat;
+          background-size: 25px;
+          padding: 0 38px 0 0;
+        }
+        .value {
+          font-family: $poppins-600;
+          float: right;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.35px;
+          em {
+            font-style: normal;
+            &.rs {
+              display: inline-block;
+              vertical-align: top;
+              font-size: 8px;
+              line-height: 22px;
+              letter-spacing: 0.35px;
+            }
+            &.days {
+              font-size: 12px;
+              letter-spacing: 0.35px;
+            }
+          }
+        }
+      }
+    }
+    .btn-holder {
+      text-align: center;
+      .btn-primary {
+        min-width: 167px;
+      }
+    }
+  }
+  &.credit-loan-main {
+    h2 {
+      font-family: $poppins-600;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.35px;
+      color: #314546;
+      padding: 0 20px;
+      margin: 20px 0 15px;
+    }
+    .resent-transactions {
+      padding: 0 20px 20px;
+      h3 {
+        font-family: $poppins-600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        color: #314546;
+      }
+    }
+    .transactions-list-row {
+      border: 1px solid #a4d7bd;
+      margin: 10px 0 0;
+      @include radius(6px);
+      display: table;
+      width: 100%;
+      position: relative;
+      padding: 8px;
+      .transactions-list-col {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 80px 0 10px;
+        &:first-child() {
+          width: 44px;
+          padding: 0;
+        }
+      }
+      .transactions-icon {
+        display: block;
+        background-color: #a4d7bd;
+        width: 44px;
+        height: 44px;
+        background-image: url($assets-location + "images/cart-icon.svg");
+        @include radius(6px);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      .transactions-icon-cash {
+        display: block;
+        background-color: #a4d7bd;
+        width: 44px;
+        height: 44px;
+        background-image: url($assets-location + "images/Cash.svg");
+        @include radius(6px);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      .title {
+        display: block;
+        font-family: $poppins-600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #404345;
+      }
+      p {
+        font-family: $poppins-400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #404345;
+        b {
+          font-weight: normal;
+          color: #757575;
+        }
+      }
+      .ballance {
+        font-family: $poppins-600;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        font-size: 16px;
+        line-height: 16px;
+        color: #404345;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+  &.credit-repayment-main {
+    padding-bottom: 80px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #396161;
+    overflow: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    h1 {
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.35px;
+      color: #e4f2cf;
+      margin: 20px 0 9px;
+    }
+    p {
+      font-family: $poppins-400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0.35px;
+      color: #ffffff;
+      margin: 0 0 25px;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .repayment-list {
+      .label {
+        font-family: $poppins-400;
+        float: left;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.35px;
+        color: #ffffff;
+      }
+      .amount {
+        font-family: $poppins-400;
+        float: right;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.35px;
+        color: #e4f2cf;
+      }
+      .form-control {
+        background: #314546;
+        @include radius(6px);
+        height: 46px;
+        border: none;
+        font-size: 16px;
+        -webkit-appearance: auto;
+        appearance: auto;
+        font-family: "Poppins-Regular", sans-serif;
+        color: #fff;
+        width: 140px;
+        padding: 0 15px;
+        float: right;
+        box-shadow: none !important;
+        outline: 0 !important;
+      }
+      .large-label {
+        line-height: 46px;
+      }
+    }
+    .repayment-list-item {
+      margin: 0 0 15px;
+    }
+  }
+  .btn-holder {
+    padding: 20px 10px;
+    //position: fixed;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    .btn-primary {
+      padding: 0 50px 0 30px;
+    }
+  }
+}
+.urdu {
+  p {
+    font-family: $urduFont;
+  }
+  .credit-main-container {
+    .available-credit {
+      direction: ltr;
+    }
+    .available-credit-inner {
+      .label {
+        font-family: $urduFont;
+        letter-spacing: 0;
+      }
+    }
+    .btn-primary {
+      &.request-credit {
+        font-family: $urduFont;
+      }
+    }
+    .resent-transactions {
+      h3 {
+        font-family: $urduFont;
+        letter-spacing: 0;
+      }
+    }
+    &.credit-loan-main {
+      h2 {
+        font-family: $urduFont;
+        letter-spacing: 0;
+      }
+      .transactions-list-row {
+        .ballance {
+          right: inherit;
+          left: 20px;
+        }
+        .transactions-list-col {
+          padding: 0 10px 0 80px;
+          &:first-child {
+            padding: 0 10px 0 0;
+          }
+        }
+        .title {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 15px;
+          line-height: 25px;
+        }
+        p {
+          font-family: $urduFont;
+          letter-spacing: 0;
+        }
+      }
+    }
+    .no-credit-main {
+      p {
+        font-family: $urduFont;
+      }
+      .request-credit {
+        font-family: $urduFont;
+        letter-spacing: 0;
+      }
+    }
+    &.distribution-list-main {
+      .distribution-head {
+        h2 {
+          font-family: $urduFont;
+          letter-spacing: 0;
+        }
+      }
+    }
+    .distribution-list {
+      .distribution-list-item {
+        direction: ltr;
+        h4 {
+          font-family: $urduFont;
+          font-size: 11px;
+          line-height: 20px;
+        }
+      }
+    }
+    &.credit-calculator-main {
+      .credit-calculator-top-section {
+        h2 {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 15px;
+        }
+        p {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 14px;
+        }
+        label {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 13px;
+        }
+        .form-control {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 14px;
+        }
+      }
+      .uplaoads-row {
+        direction: ltr;
+      }
+      .nav-tabs {
+        direction: ltr;
+        .nav-link {
+          font-family: $urduFont;
+          direction: rtl;
+        }
+      }
+      .form-output {
+        .form-amount {
+          right: inherit;
+          left: 0;
+          font-size: 18px;
+        }
+        .form-label {
+          font-family: $urduFont;
+          letter-spacing: 0;
+        }
+      }
+      .upload-new-image {
+        span {
+          font-family: $urduFont;
+          letter-spacing: 0;
+        }
+      }
+    }
+    &.stock-detail-main {
+      .stock-detail-top-text {
+        p {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 15px;
+        }
+      }
+      .confirmation-box {
+        p {
+          font-family: $urduFont;
+          letter-spacing: 0;
+        }
+      }
+    }
+    .generic-form-main {
+      label {
+        font-family: $urduFont;
+        letter-spacing: 0;
+      }
+      .form-control {
+        font-family: $urduFont;
+      }
+    }
+    &.credit-request-summary-main {
+      .credit-request-summary-cal {
+        h2 {
+          font-family: $urduFont;
+          letter-spacing: 0;
+          font-size: 15px;
+          line-height: 40px;
+          padding: 0 9px;
+          .see-term {
+            float: left;
+            font-family: $urduFont;
+          }
+        }
+        p {
+          padding: 0 9px;
+          .lebel {
+            float: right;
+            font-family: $urduFont;
+            letter-spacing: 0;
+            background-position: 0 50%;
+            padding: 0 0 0 38px;
+          }
+          .value {
+            float: left;
+            direction: ltr;
+          }
+        }
+      }
+    }
+  }
+  .credit-card-list {
+    .credit-card-list-item {
+      direction: ltr;
+    }
+  }
+  .credit-card {
+    .title {
+      font-family: $urduFont;
+    }
+    .amount-due-in {
+      p {
+        font-family: $urduFont;
+      }
+    }
+  }
+  .credit-card {
+    direction: ltr;
+  }
+}

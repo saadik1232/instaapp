@@ -1,0 +1,12 @@
+.page {
+    min-height: 730px;
+    overflow-x: hidden;
+
+    @include mobile () {
+        &--fixed {
+            position: fixed;
+            left: 0;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.MuiBox-root.css-99jqed{
+	box-shadow: none !important;
+	outline: none !important;
+}
+.custom-popup-main{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+	z-index: 11;
+	opacity: 0;
+	visibility: hidden;
+	@include transition(all 0.3s ease-in-out);
+	&.active{
+		opacity: 1;
+		visibility: visible;
+	}
+	.custom-popup-inner{
+		display: table;
+		width: 100%;
+		height: 100%;
+		padding: 0 50px;
+		.custom-popup-content{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.custom-popup-content-box{
+			text-align: center;
+			background-color: #fff;
+			@include radius(6px);
+			padding: 60px;
+		}
+		h2{
+			font-family: $poppins-600;
+			font-size: 18px;
+			line-height: 28px;
+			letter-spacing: 0.35px;
+			color: #000;
+		}
+		.btn-primary{
+			font-family: $poppins-600;
+			font-size: 16px;
+			line-height: 40px;
+			color: #FFFFFF;
+			@include radius(25px);
+			padding: 0 15px;
+			min-width: 67px;
+		}
+	}
+}
+
+
+.swal-modal{
+	@include radius(10px);
+	padding: 10px 10px 10px;
+	h2{
+		font-family: $poppins-500;
+		font-size: 14px;
+		line-height: 22px;
+		letter-spacing: 0.35px;
+		color: #314546;
+	}
+	.alert-icon{
+		width: 60px;
+		height: 60px;
+		background-image: url($assets-location+"images/ic_dialog_alert.png");
+		display: block;
+		margin: 0 auto 30px;
+		background-size: 100%;
+	}
+	.swal-footer{
+		margin: 0;
+		text-align: center;
+		.swal-button{
+			width: 167px;
+			height: 40px;
+			padding: 0;
+			background-color: #EF5E33;
+			@include radius(6px);
+			font-family: $poppins-600;
+			font-size: 14px;
+			line-height: 16px;
+			box-shadow: none !important;
+		}
+	}
+}
+
+.stock-transactions-popup-main{
+	h2{
+		font-family: $poppins-500;
+		font-size: 15px;
+		line-height: 22px;
+		text-transform: capitalize;
+		color: #000000;
+	}
+	.form-group{
+		margin: 12px 0 0;
+	}
+	.form-control{
+		border: 1.5px solid rgba(184, 184, 196, 0.5);
+		@include radius(10px !important);
+		height: 42px;
+	}
+	.detail-box{
+		border-bottom: 1px solid #E7E7E7;
+		padding: 16px 0;
+		span{
+			display: block;
+			&.title{
+				font-family: $poppins-500;
+				font-size: 15px;
+				line-height: 22px;
+				color: #000000;
+			}
+			&.value{
+				font-size: 11px;
+				line-height: 16px;
+				color: #828282;
+			}
+		}
+	}
+	.possession-good{
+		margin: 30px 0 0;
+		h3{
+			font-family: $poppins-500;
+			font-size: 12px;
+			line-height: 18px;
+			color: #000000;
+			margin: 0 0 5px;
+		}
+		p{
+			font-size: 9.4px;
+			line-height: 20px;
+			color: #B2B2B8;
+		}
+	}
+	.btn-primary{
+		@include radius (6px);
+		background: #EF5E33;
+		width: 100%;
+		margin: 25px 0 0;
+	}
+}

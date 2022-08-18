@@ -1,0 +1,46 @@
+/// Regular font family
+$text-font-stack: Arial, Helvetica !default;
+
+/// Digits font family
+$digits-font-stack: Arial, Helvetica !default;
+
+/// Assets location
+$assets-location: '../../'!default;
+
+/// Default font location
+$font-location: $assets-location + 'fonts/'!default;
+
+/// Wrapper maximum width
+$wrapper-max-width: 940px;
+
+/// Main navigation height
+$navigation-height: 64px;
+
+/// Main navigation mobile height
+$navigation-mobile-height: 60px;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @group Abstracts
+$breakpoints: (
+    'small': 320px,
+    'mobile': 700px,
+    'tablet': 1024px,
+    'desktop': 1600px,
+    'large': 1920px
+) !default;
+
+$width: 100%;
+$base-color: #6ABCAA;
+$border-color: #f0f1f3;
+$gray-color: #838383;
+$light-gray-color: #f0f0f0;
+$raleway: 'Raleway';
+$poppins-300: 'Poppins-Light', sans-serif;
+$poppins-400: 'Poppins-Regular', sans-serif;
+$poppins-500: 'Poppins-Medium', sans-serif;
+$poppins-600: 'Poppins-SemiBold', sans-serif;
+$poppins-700: 'Poppins-Bold', sans-serif;
+$gv: 'GreatVibes-Regular', sans-serif;
+$urduFont: 'MehrNastaliqWeb';

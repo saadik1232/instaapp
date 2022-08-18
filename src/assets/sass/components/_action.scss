@@ -1,0 +1,31 @@
+.action{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	color: #000;
+	text-align: center;
+	i{
+		color: #545557;
+	}
+	&.view{
+		font-size: 17px;
+	}
+	// Noman Code
+	&.reject{
+		i{
+			color: #ff3824;
+			font-size: 17px;
+		}
+	}
+	// Noman Code end
+	@include transition(all 0.5s ease-in-out);
+	@include radius(4px);
+	&:hover{
+		background-color: $base-color;
+		color: #fff;
+		i{
+			color:#fff;
+		}
+	}
+}

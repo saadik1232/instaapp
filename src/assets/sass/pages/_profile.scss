@@ -1,0 +1,647 @@
+.profile-container {
+  &.profile-form-main-par {
+    padding-bottom: 80px;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #396161;
+    overflow: auto;
+    .profile-body {
+      padding-bottom: 0;
+    }
+    .profile-form-main {
+      .btn-holder {
+        background-color: #396161;
+      }
+    }
+    .top-bar {
+      background-color: #fff;
+    }
+    .profile-body {
+      background-color: #fff;
+      padding-bottom: 28px;
+    }
+    .profile-form-main {
+      margin: 0;
+    }
+  }
+  .profile-body {
+    padding-bottom: 85px;
+  }
+  .btn-holder {
+    background-color: #fff;
+    padding: 20px 10px;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+.profile-body {
+  &.completed-profile {
+    p {
+      font-family: $poppins-500;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .firworks {
+      img {
+        max-width: 100%;
+      }
+    }
+    .btn-holder {
+      margin: 0;
+    }
+  }
+  padding: 30px 30px 0;
+  h1 {
+    color: $base-color;
+    font-family: $poppins-600;
+    font-size: 24px;
+    line-height: 27px;
+  }
+  p {
+    font-family: $poppins-400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #314546;
+    margin: 11px 0 0;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 8px;
+    }
+  }
+  .profile-agent-image {
+    max-width: 265px;
+    margin: 118px auto 0;
+    padding: 0 0 20px;
+  }
+  .img-button-container {
+    padding: 0 0 22px;
+  }
+  .img-container {
+    background-color: #6abcaa;
+    text-align: center;
+    @include radius(6px);
+    position: relative;
+    overflow: hidden;
+    padding: 0 0 53px;
+    margin: 22px 0 0;
+    img {
+      display: inline-block;
+    }
+    .action-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #396161;
+      width: 100%;
+      text-align: left;
+      font-family: $poppins-400;
+      line-height: 53px;
+      color: #fff;
+      font-weight: normal;
+      padding: 0 0 0 14px;
+      .title {
+        font-family: $poppins-700;
+        color: #ef5e33;
+      }
+
+      .cta-btn {
+        width: 32px;
+        height: 32px;
+        @include radius(50%);
+        background-color: #ef5e33;
+        background-image: url($assets-location + "images/btn-right-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: absolute;
+        right: 12px;
+        bottom: 10px;
+      }
+    }
+  }
+  .btn-holder {
+    margin: 0 0 0;
+    text-align: center;
+    .btn-primary {
+      max-width: 197px;
+      width: 100%;
+    }
+  }
+}
+.profile-radio {
+  max-width: 265px;
+  margin: 37px auto 0;
+  .MuiFormControlLabel-root {
+    margin: 15px 0 0;
+    .MuiButtonBase-root {
+      padding: 0;
+    }
+    .MuiIconButton-label {
+      position: relative;
+      span {
+        position: relative;
+        &:before {
+          background: #6abcaa;
+          @include radius(50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+        }
+      }
+    }
+    .MuiFormControlLabel-label {
+      font-family: $poppins-500;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #314546;
+      margin: 0 0 0 9px;
+    }
+  }
+  &.shop-status-radio {
+    margin: 0;
+    max-width: 100%;
+    .MuiFormControl-root {
+      margin: 0 0 30px;
+    }
+    .MuiFormControlLabel-root {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 0;
+      color: #fff;
+      &:first-child {
+        margin: 0 15px 0 0;
+      }
+      .MuiFormControlLabel-label {
+        color: #fff;
+      }
+    }
+  }
+  &.companies-purchased-radio {
+    margin: 0;
+    max-width: 100%;
+    .MuiFormControlLabel-label {
+      color: #fff;
+    }
+  }
+}
+.profile-form-main {
+  background-color: #396161;
+  padding: 16px 25px 23px;
+  margin: 28px 0 0;
+  .form-group {
+    margin: 0 0 18px;
+    position: relative;
+  }
+  .location-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-image: url($assets-location + "images/location-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  label {
+    margin: 0 0 8px;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6abcaa;
+    letter-spacing: 0.05em;
+    font-family: $poppins-600;
+  }
+  .form-control {
+    background: #314546;
+    @include radius(6px);
+    height: 46px;
+    border: none;
+    font-size: 16px;
+    appearance: auto;
+    font-family: $poppins-400;
+    color: #fff;
+    //color: #727171;
+    width: 100%;
+    padding: 0 15px;
+    box-shadow: none !important;
+    outline: 0 !important;
+    &.location-field {
+      padding-right: 48px;
+    }
+    &.custom-select {
+      background-image: url($assets-location + "images/select-icon.svg");
+      background-repeat: no-repeat;
+      background-position: 96% 50%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: "";
+    }
+  }
+  .form-control2 {
+    background: #314546;
+    border-radius: 6px;
+    height: 46px;
+    border: none;
+    font-size: 24px;
+    font-family: "Poppins-Regular", sans-serif;
+    color: #fff;
+    &.location-field {
+      padding-right: 48px;
+    }
+    border: 1px solid red;
+    box-shadow: 0 0 10px;
+  }
+  textarea.form-control {
+    height: 147px !important;
+    font-size: 16px;
+    padding: 15px 18px;
+  }
+  textarea.form-control2 {
+    height: 147px !important;
+    font-size: 16px;
+    padding: 15px 18px;
+    border: 1px red;
+  }
+  .btn-holder {
+    margin: 0 0 0;
+    text-align: center;
+    .btn-primary {
+      max-width: 167px;
+      width: 100%;
+    }
+  }
+  .react-datepicker {
+    display: block;
+    border: none;
+  }
+  .react-datepicker {
+    background-color: #314546;
+  }
+  .react-datepicker__header {
+    background-color: transparent;
+    border: none;
+    button {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      text-indent: -9999px;
+      margin: 2px 13px 0;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      overflow: hidden;
+      &.callendar-back {
+        background-image: url($assets-location + "images/callendar-prev-arrow.svg");
+      }
+      &.callendar-next {
+        background-image: url($assets-location + "images/callendar-next-arrow.svg");
+      }
+    }
+    .form-control {
+      font-size: 10px;
+      font-family: $poppins-700;
+      padding: 0;
+      height: auto;
+      width: auto;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: "";
+    }
+  }
+  .react-datepicker__header__dropdown {
+    display: none;
+  }
+  .react-datepicker__month-container {
+    float: none;
+    width: 100%;
+    padding: 10px 0 0;
+  }
+  .react-datepicker__week {
+    display: table;
+    width: 100%;
+    .react-datepicker__day {
+      display: table-cell;
+    }
+  }
+  .react-datepicker__day-names {
+    display: table;
+    width: 100%;
+    .react-datepicker__day-name {
+      display: table-cell;
+    }
+  }
+  // .react-datepicker__navigation{
+  //     position: static;
+  //     display: inline-block;
+  // }
+  .react-datepicker__day-name {
+    font-family: $poppins-700;
+    font-size: 10px;
+    line-height: 14px;
+    color: #fff;
+  }
+  .react-datepicker__header {
+    padding: 0 30px;
+    button {
+      background-color: transparent;
+      border: none;
+    }
+    select {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  .react-datepicker__month {
+    margin: 0;
+    padding: 20px 30px;
+  }
+  .react-datepicker__day {
+    font-family: $poppins-600;
+    font-size: 10px;
+    line-height: 26px;
+    color: #fff;
+    &.react-datepicker__day--selected {
+      @include radius(8px);
+      border: 3px solid #ef5e33;
+      background-color: transparent;
+    }
+    &.react-datepicker__day--keyboard-selected {
+      @include radius(8px);
+      background-color: #ef5e33 !important;
+    }
+    &.react-datepicker__day--outside-month {
+      opacity: 0.5;
+    }
+  }
+  .dimenssion-box {
+    width: 115px;
+    height: 115px;
+    @include radius(6px);
+    background-color: #314546;
+    position: relative;
+    margin: 0 0 16px;
+    background-image: url($assets-location + "images/shop-icon.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 85px;
+    &:before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      right: -16px;
+      top: 0;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      bottom: -16px;
+      left: 0;
+    }
+  }
+  &.upload-photos-main {
+    padding: 37px 25px 23px;
+    label {
+      text-align: center;
+      margin: 0 0 13px;
+    }
+    .upload-image-placeholder {
+      background-color: #fff;
+      background-image: url($assets-location + "images/upload-icon.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      min-height: 87px;
+      @include radius(5px);
+      max-width: 132px;
+      margin: 0 auto 36px;
+    }
+    .uploaded-image {
+      max-width: 132px;
+      margin: 0 auto 36px;
+      @include radius(5px);
+      overflow: hidden;
+      position: relative;
+      min-height: 87px;
+      .uploaded-image-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        text-align: center;
+        min-height: 87px;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include transform(translate(-50%, -50%));
+          path {
+            stroke: #6abcaa;
+          }
+        }
+        .loader-inner {
+          min-height: 87px;
+        }
+      }
+      img {
+        max-height: 87px;
+        width: 100%;
+      }
+    }
+    .border-line-holder {
+      text-align: center;
+      margin: 0 0 20px;
+      .border-line {
+        width: 116px;
+        height: 1px;
+        background-color: #fff;
+        display: inline-block;
+      }
+    }
+  }
+  &.retail-from-main {
+    padding: 38px 25px 23px;
+    .primary-label {
+      display: block;
+      text-align: right;
+      letter-spacing: 0.05em;
+      font-family: $poppins-600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      
+    }
+    .btn-holder {
+      margin: 29px 0 0;
+    }
+  }
+}
+.full-page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #fff, $alpha: 0.8);
+  text-align: center;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    path {
+      stroke: #6abcaa;
+    }
+  }
+}
+.urdu {
+  letter-spacing: 0;
+  .owl-carousel {
+    direction: ltr;
+  }
+  .MuiTypography-body1 {
+    letter-spacing: 0;
+  }
+  .profile-form-main {
+    .dimenssion-box {
+      &:before {
+        right: inherit;
+        left: -16px;
+      }
+    }
+    label {
+      font-family: $urduFont;
+      letter-spacing: 0;
+    }
+    .react-datepicker {
+      direction: ltr;
+    }
+    .form-control {
+      font-family: $urduFont;
+      direction: ltr;
+      option{
+        direction: ltr;
+      }
+      &.custom-select {
+        background-position: 4% 50%;
+        line-height: 46px;
+        text-indent: 9px;
+      }
+    }
+    .profile-radio {
+      &.shop-status-radio {
+        .MuiFormControlLabel-root {
+          &:first-child {
+            margin: 0 0 0 15px;
+          }
+          .MuiFormControlLabel-label {
+            font-family: $urduFont;
+            margin: 0 9px 0 0;
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+  .profile-body {
+    h1 {
+      font-family: $urduFont;
+    }
+    p {
+      font-family: $urduFont;
+      font-size: 17px;
+    }
+    .profile-radio {
+      .MuiFormControlLabel-root {
+        .MuiFormControlLabel-label {
+          margin: 0 9px 0 0;
+          font-family: $urduFont;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  .profile-container {
+    &.why-finja-main {
+      .profile-body {
+        h1 {
+          font-family: $urduFont;
+        }
+        p {
+          font-family: $urduFont;
+          font-size: 17px;
+        }
+        .btn-holder {
+          .skip {
+            font-size: 17px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+    &.sec-flow {
+      h2 {
+        font-family: $urduFont;
+      }
+    }
+  }
+}
+.react-custom-select {
+  .css-1pahdxg-control{
+    background-color: #314546;
+    border: none;
+    @include radius(6px);
+    box-shadow: none;
+    min-height: 46px;
+    @include radius(6px);
+    // font-size: 16px;
+  }
+  .css-1uccc91-singleValue{
+    color: #fff;
+    // font-size: 16px;
+  }
+  .css-1okebmr-indicatorSeparator{
+    display: none;
+  }
+  .css-b8ldur-Input{
+    color: #fff;
+  }
+  .css-yk16xz-control{
+    background-color: #314546;
+    border: none;
+    @include radius(6px);
+    min-height: 46px;
+    // padding: 0 15px;
+    .css-g1d714-ValueContainer{
+      // padding: 7px 11px;
+    }
+    .css-1wa3eu0-placeholder{
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+  // background-image: url($assets-location + "images/select-icon.svg");
+  // background-repeat: no-repeat;
+  // background-position: 96% 50%;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // text-indent: 1px;
+  // text-overflow: "";
+}

@@ -1,0 +1,93 @@
+/// Global breakpoint
+
+@mixin breakpoint ($size, $type: 'max') {
+    @media only screen and (#{$type}-width: $size) { @content; }
+}
+
+@mixin mobile($orientation: 'all') {
+    @if ($orientation == 'all') {
+        @media only screen and (max-width: 576px) {
+            @content;
+        }
+    } @else if ($orientation == 'portrait') {
+        @media only screen and (max-width: 576px) and (orientation: portrait) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: 576px) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin no-mobile() {
+    @media only screen and (min-width: 577px) {
+        @content;
+    }
+}
+
+@mixin laptop() {
+    @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media only screen and (min-width: 1600px) and (max-width: 1919px) {
+        @content;
+    }
+}
+
+@mixin large() {
+    @media only screen and (min-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin upto-desktop() {
+    @media only screen and (max-width: 1919px) {
+        @content;
+    }
+}
+
+@mixin from-laptop() {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin from-tablet() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin upto-tablet() {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin upto-laptop() {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin upto-small() {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin small-mobile() {
+    @media only screen and (max-width: 400px) {
+        @content;
+    }
+}
