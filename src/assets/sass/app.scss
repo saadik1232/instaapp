@@ -15,7 +15,10 @@
 @import "vendor/normalize", "vendor/animate";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/grid", "base/typography";
+@import "base/base",
+  // "base/fonts",
+  "base/grid",
+  "base/typography";
 
 // 4. Layout-related sections
 @import "layouts/body", "layouts/container", "layouts/section", "layouts/layout",
