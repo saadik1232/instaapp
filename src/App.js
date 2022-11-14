@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Test from "./Components/Test";
 import { Suspense } from "react";
+import Testnew from "./Components/Testnew";
+import Memo from "./Components/Memo";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       <Suspense fallback={<div>Loading</div>}>
         <Routes>
           {/* Role Managment Routes */}
-          <Route path="/" element={<Test />} />
+          <Route path="/" element={<Memo />} />
+          <Route path="/profile/:userId" element={<Test />} />
+          <Route path="/test" element={<Testnew />} />
         </Routes>
       </Suspense>
     </Router>

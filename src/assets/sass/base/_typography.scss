@@ -1,5 +1,6 @@
 body {
-  font-family: $poppins-500;
+  //font-family: $poppins-500;
+  font-family: "fredoka_oneregular";
   font-size: 13px;
   line-height: 25px;
   font-weight: normal;
@@ -9,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &.urdu{
+  &.urdu {
     font-family: $urduFont;
     direction: rtl;
   }
@@ -29,7 +30,8 @@ a {
 .h5,
 .h6 {
   margin: 0;
-  font-family: $poppins-600;
+  // font-family: $poppins-600;
+  font-family: "fredoka_oneregular";
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;

@@ -1,73 +1,95 @@
 @font-face {
-     font-family: 'Poppins-Bold';
-     src: url($font-location +'Poppins-Bold.eot?#iefix') format('embedded-opentype'), 
-          url($font-location +'Poppins-Bold.woff') format('woff'), 
-          url($font-location +'Poppins-Bold.ttf')  format('truetype'), 
-          url($font-location +'Poppins-Bold.svg#Poppins-Bold') format('svg');
-     font-weight: normal;
-     font-style: normal;
-   }
-   
-   @font-face {
-     font-family: 'Poppins-Light';
-     src: url($font-location +'Poppins-Light.eot?#iefix') format('embedded-opentype'),  
-          url($font-location +'Poppins-Light.woff') format('woff'), 
-          url($font-location +'Poppins-Light.ttf')  format('truetype'), 
-          url($font-location +'Poppins-Light.svg#Poppins-Light') format('svg');
-     font-weight: normal;
-     font-style: normal;
-   }
-   
-   @font-face {
-     font-family: 'Poppins-Medium';
-     src: url($font-location +'Poppins-Medium.eot?#iefix') format('embedded-opentype'),  
-          url($font-location +'Poppins-Medium.woff') format('woff'), 
-          url($font-location +'Poppins-Medium.ttf')  format('truetype'), 
-          url($font-location +'Poppins-Medium.svg#Poppins-Medium') format('svg');
-     font-weight: normal;
-     font-style: normal;
-   }
-   
-   @font-face {
-     font-family: 'Poppins-Regular';
-     src: url($font-location +'Poppins-Regular.eot?#iefix') format('embedded-opentype'),  
-          url($font-location +'Poppins-Regular.woff') format('woff'), 
-          url($font-location +'Poppins-Regular.ttf')  format('truetype'), 
-          url($font-location +'Poppins-Regular.svg#Poppins-Regular') format('svg');
-     font-weight: normal;
-     font-style: normal;
-   }
-   
-   @font-face {
-     font-family: 'Poppins-SemiBold';
-     src: url($font-location +'Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),  
-          url($font-location +'Poppins-SemiBold.woff') format('woff'), 
-          url($font-location +'Poppins-SemiBold.ttf')  format('truetype'), 
-          url($font-location +'Poppins-SemiBold.svg#Poppins-SemiBold') format('svg');
-     font-weight: normal;
-     font-style: normal;
-   }
+  font-family: "Poppins-Bold";
+  src: url($font-location + "Poppins-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "Poppins-Bold.woff") format("woff"),
+    url($font-location + "Poppins-Bold.ttf") format("truetype"),
+    url($font-location + "Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-   @font-face {
-      font-family: 'GreatVibes-Regular';
-      src: url($font-location +'GreatVibes-Regular.eot?#iefix') format('embedded-opentype'),  
-           url($font-location +'GreatVibes-Regular.woff') format('woff'), 
-           url($font-location +'GreatVibes-Regular.ttf')  format('truetype'), 
-           url($font-location +'GreatVibes-Regular.svg#GreatVibes-Regular') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
+@font-face {
+  font-family: "Poppins-Light";
+  src: url($font-location + "Poppins-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "Poppins-Light.woff") format("woff"),
+    url($font-location + "Poppins-Light.ttf") format("truetype"),
+    url($font-location + "Poppins-Light.svg#Poppins-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-    @font-face {
-     font-family: 'MehrNastaliqWeb';
-     src: url($font-location +'MehrNastaliqWeb.eot');
-     src: url($font-location +'MehrNastaliqWeb.eot?#iefix') format('embedded-opentype'),
-          url($font-location +'MehrNastaliqWeb.woff2') format('woff2'),
-          url($font-location +'MehrNastaliqWeb.woff') format('woff'),
-          url($font-location +'MehrNastaliqWeb.ttf') format('truetype'),
-          url($font-location +'MehrNastaliqWeb.svg#MehrNastaliqWeb') format('svg');
-     font-weight: normal;
-     font-style: normal;
-     font-display: swap;
- }
- 
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url($font-location + "Poppins-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "Poppins-Medium.woff") format("woff"),
+    url($font-location + "Poppins-Medium.ttf") format("truetype"),
+    url($font-location + "Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url($font-location + "Poppins-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "Poppins-Regular.woff") format("woff"),
+    url($font-location + "Poppins-Regular.ttf") format("truetype"),
+    url($font-location + "Poppins-Regular.svg#Poppins-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url($font-location + "Poppins-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "Poppins-SemiBold.woff") format("woff"),
+    url($font-location + "Poppins-SemiBold.ttf") format("truetype"),
+    url($font-location + "Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GreatVibes-Regular";
+  src: url($font-location + "GreatVibes-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "GreatVibes-Regular.woff") format("woff"),
+    url($font-location + "GreatVibes-Regular.ttf") format("truetype"),
+    url($font-location + "GreatVibes-Regular.svg#GreatVibes-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MehrNastaliqWeb";
+  src: url($font-location + "MehrNastaliqWeb.eot");
+  src: url($font-location + "MehrNastaliqWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url($font-location + "MehrNastaliqWeb.woff2") format("woff2"),
+    url($font-location + "MehrNastaliqWeb.woff") format("woff"),
+    url($font-location + "MehrNastaliqWeb.ttf") format("truetype"),
+    url($font-location + "MehrNastaliqWeb.svg#MehrNastaliqWeb") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "fredoka_oneregular";
+  src: url("../../fonts/fredoka-one.dingbats.ttf") format("truetype"),
+    url("../../fonts/fredoka-one.one-regular-webfont.woff") format("woff"),
+    url("../../fonts/fredoka-one.one-regular.otf") format("otf"),
+    url("../../fonts/fredoka-one.one-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url("../../fonts/fredoka-one.one-regular-webfont.woff") format("woff");
+}

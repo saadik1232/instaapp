@@ -1,5 +1,5 @@
 .profilebodyinsta {
-  padding: 36px 40px 37px;
+  padding: 36px 40px 6px;
   text-align: center;
   display: inline-flex;
 }
@@ -7,11 +7,13 @@
 .instaimgholder-main {
   text-align: center;
   margin-left: -36px;
+  margin-right: 5px;
 }
 
 .instaimgholder {
   border-radius: 50%;
-  width: 133px;
+  width: 110px;
+  margin-left: 32px;
 }
 
 .btnprimaryinsta {
@@ -49,5 +51,23 @@
   height: -webkit-fill-available;
   width: auto;
   border-radius: 25px;
-  border: 2px solid #73ad21;
+  //border: 2px solid #73ad21;
+}
+
+.name {
+  font-family: "fredoka_oneregular";
+  // font-weight: bold;
+  margin-top: 50px;
+  margin-left: 31px;
+}
+
+.text {
+  padding: 13px;
+  // font-weight: bold;
+  font-family: "fredoka_oneregular";
+  font-size: x-large;
+}
+
+.label {
+  font-family: "fredoka_oneregular";
 }
