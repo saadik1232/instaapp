@@ -15,11 +15,12 @@ import {
   equalTo,
   orderByKey,
 } from "firebase/database";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { async } from "@firebase/util";
 
 export default function Test() {
   const params = useParams();
+  const navigate = useNavigate();
 
   const src =
     "https://media.istockphoto.com/photos/travel-planning-background-picture-id1309040743?b=1&k=20&m=1309040743&s=170667a&w=0&h=eyIzT1oSW2B5gPMPqgybEseIYIUrY96cxPTE_B0ewVs=";
@@ -266,10 +267,26 @@ export default function Test() {
           <img className="imgholdergrid" src={src} />
         </div> */}
             {todisplaygallerys &&
-              todisplaygallerys.map((ent, key, index) => (
+              todisplaygallerys.map((ent, index) => (
                 <>
                   {ent.public.galleryInfo.postImgURL && (
-                    <div class="col-6 myclass" key={index}>
+                    <div
+                      class="myclass"
+                      key={index}
+                      onClick={() => {
+                        if (ent.public.posts) {
+                          navigate("/album", {
+                            state: {
+                              ent,
+                              profilepic,
+                              name,
+                              username,
+                              userid: params.userId,
+                            },
+                          });
+                        }
+                      }}
+                    >
                       <img
                         className="imgholdergrid"
                         src={ent.public.galleryInfo.postImgURL}

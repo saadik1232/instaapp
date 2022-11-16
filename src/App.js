@@ -10,6 +10,7 @@ import Test from "./Components/Test";
 import { Suspense } from "react";
 import Testnew from "./Components/Testnew";
 import Memo from "./Components/Memo";
+import SingleAlbum from "./Components/SingleAlbum";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           {/* Role Managment Routes */}
           <Route path="/" element={<Memo />} />
           <Route path="/profile/:userId" element={<Test />} />
+          <Route path="/album" element={<SingleAlbum />} />
           <Route path="/test" element={<Testnew />} />
         </Routes>
       </Suspense>
