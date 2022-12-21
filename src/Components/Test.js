@@ -177,6 +177,18 @@ export default function Test() {
               {/* <img src={arrowLeft} alt="Arrow pointing left" />{" "} */}
             </span>
             <div className="progress-container">
+              <a href="https://www.google.com/">Header test</a>
+            </div>
+          </div>
+          <div className="top-bar">
+            <span
+              className="back-arrow"
+              //onClick={backbbtn}
+            >
+              {" "}
+              {/* <img src={arrowLeft} alt="Arrow pointing left" />{" "} */}
+            </span>
+            <div className="progress-container">
               {username && (
                 <Progbar
                   first={100}
@@ -262,7 +274,7 @@ export default function Test() {
             <h2 className="text">Public Albums</h2>
           </div>
 
-          <div class="row">
+          <div class="rowforalbums">
             {/* <div class="col-6 myclass">
           <img className="imgholdergrid" src={src} />
         </div> */}
@@ -291,10 +303,16 @@ export default function Test() {
                         className="imgholdergrid"
                         src={ent.public.galleryInfo.postImgURL}
                       />
+                      <div class="top-left">{ent.public.galleryInfo.name} </div>
                     </div>
                   )}
                 </>
               ))}
+          </div>
+          <div class="footer">
+            <button className="button">
+              <a href="https://moodstream.page.link/referral">Use the App</a>
+            </button>
           </div>
         </>
       )}
